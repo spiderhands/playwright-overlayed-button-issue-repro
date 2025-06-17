@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Playwright Button Overlay</title>
+    <style>
+      body {
+        background-color: #f0f0f0;
+        overflow: hidden;
+      }
+      #container {
+        height: 100vh;
+        overflow: scroll;
+        padding-top: 80px;
+        box-sizing: border-box;
+      }
+      #header {
+        position: absolute;
+        top: 0;
+        background-color: #ffffffdd;
+        padding: 20px;
+        height: 80px;
+        z-index: 1;
+        box-sizing: border-box;
+        width: 100%;
+      }
+      #header span {
+        font-size: 20px;
+        font-weight: bold;
+        background-color: #ffffff;
+      }
+      section {
+        width: 200px;
+      }
+    </style>
+    <!-- This is a minimal HTML5 template. -->
+  </head>
+  <body>
+    <div id="container">
+      <div id="content">
+        <section>
+          <h2>Title</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
+            quos. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Quisquam, quos. Lorem ipsum dolor sit amet consectetur adipisicing
+            elit. Quisquam, quos. Lorem ipsum dolor sit amet consectetur
+            adipisicing elit. Quisquam, quos. Lorem ipsum dolor sit amet
+            consectetur adipisicing elit. Quisquam, quos. Lorem ipsum dolor sit
+            amet consectetur adipisicing elit. Quisquam, quos. Lorem ipsum dolor
+            sit amet consectetur adipisicing elit. Quisquam, quos. Lorem ipsum
+            dolor sit amet consectetur adipisicing elit. Quisquam, quos. Lorem
+            ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
+            quos. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Quisquam, quos. Lorem ipsum dolor sit amet consectetur adipisicing
+            elit. Quisquam, quos. Lorem ipsum dolor sit amet consectetur
+            adipisicing elit. Quisquam, quos. Lorem ipsum dolor sit amet
+            consectetur adipisicing elit. Quisquam, quos. Lorem ipsum dolor sit
+            amet consectetur adipisicing elit. Quisquam, quos. Lorem ipsum dolor
+            sit amet consectetur adipisicing elit. Quisquam, quos. Lorem ipsum
+            dolor sit amet consectetur adipisicing elit. Quisquam, quos. Lorem
+            ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
+            quos. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Quisquam, quos. Lorem ipsum dolor sit amet consectetur adipisicing
+            elit. Quisquam, quos. Lorem ipsum dolor sit amet consectetur
+            adipisicing elit. Quisquam, quos. Lorem ipsum dolor sit amet
+            consectetur adipisicing elit. Quisquam, quos. Lorem ipsum dolor sit
+            amet consectetur adipisicing elit. Quisquam, quos. Lorem ipsum dolor
+            sit amet consectetur adipisicing elit. Quisquam, quos. Lorem ipsum
+            dolor sit amet consectetur adipisicing elit. Quisquam, quos. Lorem
+            ipsum dolor sit amet consectetur adipisicing
+          </p>
+        </section>
+
+        <section>
+          <span id="counter">0</span>
+          <button id="button">Can't click this button</button>
+        </section>
+        <section>
+          <h2>Title</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
+            quos. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Quisquam, quos. Lorem ipsum dolor sit amet consectetur adipisicing
+            elit. Quisquam, quos. Lorem ipsum dolor sit amet consectetur
+            adipisicing elit. Quisquam, quos. Lorem ipsum dolor sit amet
+            consectetur adipisicing elit. Quisquam, quos. Lorem ipsum dolor sit
+            amet consectetur adipisicing elit. Quisquam, quos. Lorem ipsum dolor
+            sit amet consectetur adipisicing elit. Quisquam, quos. Lorem ipsum
+            dolor sit amet consectetur adipisicing elit. Quisquam, quos. Lorem
+            ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
+            quos. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Quisquam, quos. Lorem ipsum dolor sit amet consectetur adipisicing
+            elit. Quisquam, quos. Lorem ipsum dolor sit amet consectetur
+            adipisicing elit. Quisquam, quos. Lorem ipsum dolor sit amet
+            consectetur adipisicing elit. Quisquam, quos. Lorem ipsum dolor sit
+            amet consectetur adipisicing elit. Quisquam, quos. Lorem ipsum dolor
+            sit amet consectetur adipisicing elit. Quisquam, quos. Lorem ipsum
+            dolor sit amet consectetur adipisicing elit. Quisquam, quos. Lorem
+            ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam,
+            quos. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Quisquam, quos. Lorem ipsum dolor sit amet consectetur adipisicing
+            elit. Quisquam, quos. Lorem ipsum dolor sit amet consectetur
+            adipisicing elit. Quisquam, quos. Lorem ipsum dolor sit amet
+            consectetur adipisicing elit. Quisquam, quos. Lorem ipsum dolor sit
+            amet consectetur adipisicing elit. Quisquam, quos. Lorem ipsum dolor
+            sit amet consectetur adipisicing elit. Quisquam, quos. Lorem ipsum
+            dolor sit amet consectetur adipisicing elit. Quisquam, quos. Lorem
+            ipsum dolor sit amet consectetur adipisicing
+          </p>
+        </section>
+      </div>
+    </div>
+    <div id="header">
+      <span>Overlaying Header</span>
+    </div>
+
+    <script>
+      document.getElementById("button").addEventListener("click", function () {
+        document.getElementById("counter").innerText =
+          parseInt(document.getElementById("counter").innerText) + 1;
+      });
+    </script>
+  </body>
+</html>

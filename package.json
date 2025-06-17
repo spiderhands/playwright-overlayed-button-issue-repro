@@ -1,0 +1,21 @@
+{
+  "name": "playwright-button-overlay",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node web/index.js",
+    "test": "playwright test",
+    "reproduction": "pnpm run start & pnpm run test"
+  },
+  "keywords": [],
+  "author": "spiderhands",
+  "packageManager": "pnpm@10.7.0",
+  "devDependencies": {
+    "@playwright/test": "^1.53.0",
+    "@types/node": "^24.0.3"
+  },
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}
